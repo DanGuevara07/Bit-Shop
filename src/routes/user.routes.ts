@@ -5,10 +5,13 @@ import Controllers from "../controllers"
 
 const router = Router()
 
-// crear un usuario
+// rutas de usuario
 router.post("/create", Controllers.User.createUser)
+router.get("/getAll", Controllers.User.getUsers)
+router.get("/getUser/:username", Controllers.User.getUser)
+router.put("/updateUser", Controllers.User.updateUser)
 
-router.post("/login", Controllers.User.login)
+
 
 
 export default router
